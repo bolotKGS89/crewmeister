@@ -1,0 +1,11 @@
+bundesbank:
+  base:
+    url: https://api.frankfurter.app
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,info,health,beans
+  security:
+    enabled: true
