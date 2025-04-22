@@ -10,3 +10,8 @@ In this approach, I used couple of best practices that are common for spring boo
 6. Web-client. I used webclient instead of resttemplate so that application is asynchronous, non-blocking I/O to increase concurrency
 7. Swagger. I used swagger to document all APIs for better maintenance
 8. Actuator. I used actuator to monitor its health or to provide the information
+
+## Instructions
+1. docker build -t currency-service:latest .
+
+2. docker run -p 8080:8080 currency-service:latest
