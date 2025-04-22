@@ -12,6 +12,8 @@ In this approach, I used couple of best practices that are common for spring boo
 8. Actuator. I used actuator to monitor its health or to provide the information
 
 ## Instructions
+in root folder of the project, run following commands:
+
 1. docker build -t currency-service:latest .
 
 2. docker run -p 8080:8080 currency-service:latest
