@@ -40,7 +40,7 @@ public class CurrencyController {
     @Operation(summary = "Get exchange rates for a specific base currency")
     @GetMapping("/exchange‑rates")
     public ResponseEntity<RateResponseDto> getExchangeRates(@RequestParam("base") String base) {
-        log.info("CurrencyController.getExchangeRates invoked {}", base);
+        log.info("CurrencyController.getExchangeRates invoked ");
         return new ResponseEntity<>(currencyService.getExchangeRates(base), HttpStatus.OK);
     }
 
@@ -50,7 +50,7 @@ public class CurrencyController {
                                                                       @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                                                       LocalDate date,
                                                                       @RequestParam("base") String base) {
-        log.info("CurrencyController.getExchangeRatesForOneDate invoked {} {}", date, base);
+        log.info("CurrencyController.getExchangeRatesForOneDate invoked ");
         return new ResponseEntity<>(currencyService.getEurFxRateOnDate(date, base), HttpStatus.OK);
     }
 
@@ -62,7 +62,7 @@ public class CurrencyController {
                                                                       @RequestParam("amount") Double amount,
                                                                       @RequestParam("from")
                                                                                 String from) {
-        log.info("CurrencyController.getEurFxRateOnDateConvertedToEur invoked {} {} {} {}", date, amount, from, EUR);
+        log.info("CurrencyController.getEurFxRateOnDateConvertedToEur invoked");
         return new ResponseEntity<>(currencyService
                 .getEurFxRateOnDateConvertedToEur(date, from, EUR, amount), HttpStatus.OK);
     }
